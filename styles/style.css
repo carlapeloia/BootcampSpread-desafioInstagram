@@ -1,0 +1,404 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --nav-color: linear-gradient(20deg, var(--color-5) 16.62%, var(--color-1) 85.61%);
+  --color-1:#FFFFFF;
+  --color-2:#23232E;
+  --color-3:#c9c9c9;
+  --color-4:#d3d3d3;
+  --color-5:#d3d3d38c;
+  --color-6:#BC309F;
+  --color-7:#751c63;
+  --color-8:#bc30a098;
+  --color-9:#4f4fc4;
+  --color-10: #8b8bf8;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 1.6rem;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+  'header header'
+  'aside principal'
+  'footer footer';
+}
+
+#header {
+  grid-area: header;
+  height: 10vh;
+  width: 100vw;
+}
+
+nav {
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-weight: 700;
+  background: var(--nav-color);
+}
+
+nav img {
+  width: 80%;
+}
+
+#aside {
+  grid-area: aside;
+  height: 74vh;
+  width: 48vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 1.2rem;
+}
+
+.cardImage {
+  height: 90%;
+  width: 60%;
+  display: inline-block;
+  background-position: center;
+  background-size: cover;
+
+}
+
+#asideImage {
+  height: 100%;
+  width: 100%;
+  background-image: url('../images/pessoas.jpg');
+  border-radius: 4px;
+}
+
+#principal {
+  grid-area: principal;
+  height: 74vh;
+  width: 48vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-left: 1.2rem;
+}
+
+#principal a {
+  text-decoration: none;
+}
+
+#forgotPassword {
+  color: var(--color-2);
+}
+
+#forgotPassword:hover {
+  color: var(--color-8);
+}
+
+.login {
+  height: 61%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 1em var(--color-3);
+
+}
+
+.enter {
+  height: 100%;
+  width: 100%;
+}
+
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60%;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.formLogin input {
+  height: 30%;
+  width: 80%;
+  border: 1px solid var(--color-4);
+  border-radius: 4px;
+  padding: .5rem;
+  margin-top: .6rem;
+  margin-bottom: .6rem;
+  outline: none;
+}
+
+.formLogin button {
+  height:30%;
+  width: 80%;
+  margin-top: .6rem;
+  margin-bottom: .6rem;
+  background-color: var(--color-6);
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1.8rem;
+  cursor: pointer;
+  box-shadow: 0 0 .3em var(--color-8);
+}
+
+.formLogin a {
+  color: var(--color-1);
+}
+
+.formLogin a:hover {
+  color: var(--color-7);
+  font-weight: 600;
+}
+
+.enter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.enter img {
+  width: 22px;
+  margin-top: 1.2rem;
+}
+
+#Facebook {
+  color: var(--color-9);
+  font-weight: 600;
+  height: 15%;
+}
+
+#Facebook:hover {
+  color: var(--color-10);
+}
+
+#forgotPassword {
+  color: var(--color-2);
+  height: 10%;
+}
+
+#forgotPassword:hover {
+  color: var(--color-8);
+}
+
+.newAccount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  width: 60%;
+  box-shadow: 0 0 1em var(--color-3);
+}
+
+.newAccount a {
+  color: var(--color-6);
+  font-weight: 600;
+}
+
+.newAccount a:hover {
+  color: var(--color-7);
+}
+
+.app {
+  display: flex;
+  width: 80%;
+}
+
+.download {
+  height: 15%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: .6rem;
+}
+
+.download p {
+  height: 100%;
+}
+
+.download img {
+  width: 95%;
+  height: 95%;
+}
+
+#footer {
+  grid-area: footer;
+  height: 15vh;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.copy {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  color: var(--color-6);
+  gap: 24px;
+}
+
+.footerLinks, .copy {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.3rem;
+}
+
+.footerLinks {
+  justify-content: space-evenly;
+  border-top: 2px solid var(--color-5);
+}
+
+.footerLinks a {
+  margin: 10px 5px 0px 5px;
+  text-decoration: none;
+  color: var(--color-6);
+}
+
+.footerLinks a:hover {
+  color: var(--color-9);
+}
+
+select, option {
+  color: var(--color-6);
+  border-style: none;
+  outline: none;
+}
+
+@media(max-width: 940px) {
+
+
+  #aside {
+     margin: auto;
+     max-width: 330px;
+     padding-right: 10px;
+  }
+
+  #principal {
+    max-width: 330px;
+    margin-left: 0;
+    padding-left: 10px;
+}
+
+  .cardImage {
+    width: 100%;
+    max-width: 288px;
+  }
+
+  .login {
+    width: 100%;
+    max-width: 290px;
+  }
+
+  .newAccount {
+    width: 100%;
+    max-width: 290px;
+    text-align: center;
+  }  
+
+  .newAccount a {
+    width: 100%;
+  }
+
+  .download {
+    width: 100%;
+    max-width: 290px;
+    margin-bottom: 10px;
+  }
+
+#footer {
+  height: 85%;
+}
+} 
+
+@media(max-width: 590px) {
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin: auto;
+  }
+
+  #header {
+    margin-top: 22px;
+    width: 100%;
+   }
+
+   nav {
+     justify-content: center;
+     background: var(--color-1);
+   }
+
+   #aside {
+    display: none;
+  }
+
+  #principal {
+    width: 100vw;
+    align-items: center;
+    padding-left: 0;
+    }
+
+  .login {
+    width: 95%;
+    margin-left: 0;
+  }
+
+  .newAccount {
+    width: 95%;
+    margin-left: 0;
+  }  
+
+  .download {
+    width: 95%;
+    margin-left: 0;
+  }
+
+  #footer {
+    height: auto;
+    width: 100%;
+    margin-top: 5px;
+    gap: 3px;
+  }
+
+  .copy {
+    gap: 3px;
+    color: var(--color-8);
+    margin: 10px 0;
+  }
+
+  .footerLinks, .copy {
+    width: 95%;
+  }  
+
+  .footerLinks a {
+    color: var(--color-8);
+  }
+
+
+  select, option {
+    color: var(--color-8);
+    position: absolute;
+    top: 4px;
+}
+
+}

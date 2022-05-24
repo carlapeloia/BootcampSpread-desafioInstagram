@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-background: #ebe5e5;
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+.gif {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100vh;
+}
+
+.gif img {
+  width: 200px;
+}
